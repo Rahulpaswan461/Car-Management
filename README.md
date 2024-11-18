@@ -5,15 +5,15 @@ Express.js, and MongoDB.The API is designed to manage car listings and provide f
 
 ## Features
 - User Authentication:
-  1. Signup: Create a new user account.
-  2. Login: Authenticate an existing user.
-  3. User can only manage their own cars.
+  - Signup: Create a new user account.
+  - Login: Authenticate an existing user.
+  - User can only manage their own cars.
 - Car Management:
-  1.Create Car: Users can add a new car with up to 10 images, title, description, and tags (car_type, company, dealer).
-  2.View Cars: Users can view all the cars they have added.
-  3.Update Car: Users can update the car’s title, description, tags, and images.
-  4.Delete Car: Users can delete a car from their list.
-  5.Search Cars: Users can search through their cars based on title, description, or tags.
+  - Create Car: Users can add a new car with up to 10 images, title, description, and tags (car_type, company, dealer).
+  - View Cars: Users can view all the cars they have added.
+  - Update Car: Users can update the car’s title, description, tags, and images.
+  - Delete Car: Users can delete a car from their list.
+  - Search Cars: Users can search through their cars based on title, description, or tags.
   
 - Product APIs:
   - Create User (POST /api/users/signup)
