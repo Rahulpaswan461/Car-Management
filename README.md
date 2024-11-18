@@ -73,6 +73,63 @@ Express.js, and MongoDB.The API is designed to manage car listings and provide f
 - PORT=3000
 - MONGO_URL=mongodb://localhost:27017/car-management
 
+## API Endpoints
+  ### User Endpoints
+   1. POST /signup:
+     - Register a new user or admin.
+     - Request Body:
+ 
+          {
+            "name": "your-name",
+            "email": "your-email",
+            "password": "your-password",
+          }
+2. POST /login:
+     - Log in as a user.
+     - Request Body:
+       
+            {
+              "email": "your-email",
+              "password": "your-password"
+       
+            }
+
+ ### Product Endpoints
+ 1. Create Car
+    - POST /api/cars/create
+
+          {
+          "title": "Tesla Model 3",
+          "description": "An all-electric sedan with impressive range and performance.",
+          "tags": {
+            "car_type": "Sedan",
+            "company": "Tesla",
+            "dealer": "Electric Cars Inc."
+          },
+          "images": ["image1.jpg", "image2.jpg"]
+          }
+
+  2.  List All Cars (for Authenticated User)
+      - GET /api/cars/get-all
+  3. Get Specific Car Details
+     - GET /api/cars/get/:car_id
+  4. Update Car
+     - PATCH /api/cars/update/:car_id
+         {
+            "title": "Updated Car Title",
+            "description": "Updated Car Description",
+            "tags": {
+              "car_type": "SUV",
+              "company": "Tesla",
+              "dealer": "Electric Cars Inc."
+            },
+            "images": ["updated_image1.jpg"]
+         }
+  4. Delete Car
+     - DELETE /api/cars/delete/:car_id
+  5.  Search Cars
+  6.  - GET /api/cars/search
+  
  ## Technologies Used
  - Node.js: JavaScript runtime used to build the backend API.
  - Express.js: Web framework to handle HTTP requests and routing.
