@@ -28,7 +28,7 @@ app.use(checkForAuthenticateUser("token"))
 
 // routes 
 app.use("/api/user",userRoute)
-app.use("/api/car",carRoute)
+app.use("/api/cars",carRoute)
 
 app.listen(PORT,()=>{
     console.log(`Server is running at PORT ${PORT}`)

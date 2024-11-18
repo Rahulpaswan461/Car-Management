@@ -1,5 +1,4 @@
 const JWT = require("jsonwebtoken")
-const secret = "rahul@123"
 
 function createTokenForAuthenticateUser(user){
     const payload = {
@@ -8,11 +7,11 @@ function createTokenForAuthenticateUser(user){
         email: user.email
     }
 
-    return JWT.sign(payload,secret)
+    return JWT.sign(payload,process.env.SECRET,{expiresIn:'2h'})
 }
 
 function verifyToken(token){
-    return JWT.verify(token,secret)
+    return JWT.verify(token,process.env.SECRET)
 }
 
 module.exports = {
